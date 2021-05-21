@@ -22,6 +22,10 @@ const Header = styled.h1`
   color: ${(props) => props.color};
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1420px) {
+    font-size: 4rem;
+  }
 `;
 
 const Content = styled.div``;

@@ -14,6 +14,7 @@ const BUTTON = styled.button`
   transition: all 0.2s;
   text-transform: uppercase;
   font-size: 0.8rem;
+  z-index: 500;
 
   &:hover {
     background: ${(props) => props.backgroundHover};

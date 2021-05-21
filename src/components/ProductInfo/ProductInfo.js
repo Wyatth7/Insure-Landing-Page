@@ -16,11 +16,13 @@ const Header = styled.h3`
   font-size: 1.5rem;
   letter-spacing: 1.5px;
   margin-bottom: 0.3rem;
+  color: hsl(256, 26%, 20%);
 `;
 
 const Paragraph = styled.p`
   font-size: 1.1rem;
   line-height: 1.5rem;
+  color: hsl(256, 26%, 20%);
 `;
 
 const ProductInfo = (props) => {

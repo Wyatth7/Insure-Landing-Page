@@ -12,6 +12,8 @@ import {
   Money,
   PeopleFirst,
 } from "./components/ProductInfo/Icons/Icons";
+import MoreInfo from "./components/MoreInfo/MoreInfo";
+import Footer from "./components/Footer/Footer";
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -26,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Karla', sans-serif;
     font-size: 62.5%;
     font-weight: 400;
+  }
+
+  h1,h2,h3 {
+    font-family: "DM Serif Display", serif;
   }
 `;
 
@@ -44,19 +50,71 @@ const TopInfo = styled.div`
   grid-template-columns: 49% 50%;
   grid-gap: 1%;
   padding: 7rem 15rem;
+
+  @media (max-width: 1580px) {
+    grid-template-columns: 50% 50%;
+    grid-gap: 1%;
+    background: linear-gradient(hsl(256, 26%, 20%) 80%, #ffffff 20%);
+  }
+
+  @media (max-width: 1420px) {
+    grid-template-columns: 55% 45%;
+    grid-gap: 2%;
+    background: linear-gradient(hsl(256, 26%, 20%) 90%, #ffffff 10%);
+  }
+
+  @media (max-width: 1180px) {
+    padding: 7rem 10rem;
+  }
+
+  @media (max-width: 1060px) {
+    padding: 7rem 5rem;
+  }
+
+  @media (max-width: 920px) {
+    padding: 7rem 2rem;
+  }
 `;
 
 const BottomInfo = styled.div`
   padding: 3rem 15rem;
+
+  @media (max-width: 1180px) {
+    padding: 3rem 10rem;
+  }
+
+  @media (max-width: 1060px) {
+    padding: 7rem 5rem;
+  }
+
+  @media (max-width: 920px) {
+    padding: 7rem 2rem;
+  }
 `;
 
 const IconInfoContainer = styled.div`
-  margin-top: 4.5rem;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: 32% 32% 33%;
   grid-gap: 1rem;
   overflow: hidden;
   width: 100%;
+`;
+
+const MoreInfoContainer = styled.div`
+  padding: 4rem 15rem;
+
+  @media (max-width: 1180px) {
+    padding: 3rem 10rem;
+  }
+
+  @media (max-width: 1060px) {
+    padding: 3rem 5rem;
+  }
+
+  @media (max-width: 920px) {
+    padding: 3rem 2rem;
+  }
 `;
 
 const Picture = styled.img`
@@ -126,18 +184,22 @@ function App() {
                 icon={<Money />}
                 header="Affordable Prices"
                 text="We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible."
+                  but we still offer the best coverage possible."
               />
               <ProductInfo
                 icon={<PeopleFirst />}
                 header="People First"
                 text="Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it."
+                  sure you’re covered when you need it."
               />
             </IconInfoContainer>
           </Headers>
         </BottomInfo>
+        <MoreInfoContainer>
+          <MoreInfo />
+        </MoreInfoContainer>
       </Content>
+      <Footer />
     </APP>
   );
 }

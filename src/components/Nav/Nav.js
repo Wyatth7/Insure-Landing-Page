@@ -13,6 +13,18 @@ const NAV = styled.nav`
   background-color: #ffffff;
   width: 100%;
   z-index: 1000;
+
+  @media (max-width: 1180px) {
+    padding: 1.2rem 10rem;
+  }
+
+  @media (max-width: 1060px) {
+    padding: 1.2rem 5rem;
+  }
+
+  @media (max-width: 920px) {
+    padding: 1.2rem 2rem;
+  }
 `;
 
 const LINKS = styled.div`
