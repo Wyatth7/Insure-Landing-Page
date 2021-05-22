@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import Logo from "./Logo/Logo";
+import NavBars from "./NavBars/NavBars";
 import NavLinks from "./NavLinks/NavLinks";
 
 const NAV = styled.nav`
@@ -31,6 +32,10 @@ const LINKS = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
 `;
 
 const Nav = (props) => {
@@ -50,6 +55,7 @@ const Nav = (props) => {
           view plans
         </Button>
       </LINKS>
+      <NavBars />
     </NAV>
   );
 };

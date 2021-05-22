@@ -74,6 +74,12 @@ const TopInfo = styled.div`
   @media (max-width: 920px) {
     padding: 7rem 2rem;
   }
+
+  @media (max-width: 780px) {
+    grid-template-columns: 100%;
+    padding: 0rem 0;
+    background: #ffffff;
+  }
 `;
 
 const BottomInfo = styled.div`
@@ -120,9 +126,15 @@ const MoreInfoContainer = styled.div`
 const Picture = styled.img`
   width: 100%;
   height: auto;
+
+  @media (max-width: 780px) {
+    grid-row-start: 1;
+  }
 `;
 
-const HeaderOneContent = styled.div``;
+const HeaderOneContent = styled.div`
+  order: 2;
+`;
 
 const HeaderOneParagraph = styled.p`
   margin: 1.7rem 0;

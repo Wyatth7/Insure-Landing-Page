@@ -5,6 +5,10 @@ import styled from "styled-components";
 const HEADERS = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 780px) {
+    background: ${(props) => (props.bkColor ? props.bkColor : "#ffffff")};
+  }
 `;
 
 const Line = styled.div`
