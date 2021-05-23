@@ -5,6 +5,7 @@ import styled from "styled-components";
 const HEADERS = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 950;
 
   @media (max-width: 780px) {
     background-image: ${(props) => props.background};
