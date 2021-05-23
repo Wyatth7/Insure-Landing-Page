@@ -26,6 +26,14 @@ const NAV = styled.nav`
   @media (max-width: 920px) {
     padding: 1.2rem 2rem;
   }
+
+  @media (max-width: 780px) {
+    padding: 1.2rem 4rem;
+  }
+
+  @media (max-width: 440px) {
+    padding: 1.2rem 1rem;
+  }
 `;
 
 const LINKS = styled.div`

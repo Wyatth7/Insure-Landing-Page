@@ -6,6 +6,10 @@ const DESK_RIGHT = styled.svg`
   position: absolute;
   right: 0;
   top: 0;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
 `;
 export const DeskRight = (props) => {
   return (
@@ -26,6 +30,10 @@ const DESK_LEFT = styled.svg`
   position: absolute;
   top: 35%;
   left: 0;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
 `;
 export const DeskLeft = (props) => {
   return (
@@ -47,6 +55,11 @@ const MORE_INFO_BG = styled.svg`
   top: -15%;
   right: 0%;
   font-size: 1rem;
+
+  @media (max-width: 780px) {
+    top: -15%;
+    right: -20%;
+  }
 `;
 export const MoreInfoBG = (props) => {
   return (

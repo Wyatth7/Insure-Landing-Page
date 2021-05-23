@@ -19,6 +19,10 @@ const FOOTER = styled.footer`
   @media (max-width: 920px) {
     padding: 3rem 2rem;
   }
+
+  @media (max-width: 780px) {
+    padding: 3rem 4rem;
+  }
 `;
 
 const Socials = styled.div`
@@ -26,6 +30,12 @@ const Socials = styled.div`
   padding-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Links = styled.div`
@@ -37,6 +47,14 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   padding: 2rem 0;
+
+  @media (max-width: 590px) {
+    grid-gap: 1rem;
+  }
+
+  @media (max-width: 440px) {
+    grid-template-columns: 100%;
+  }
 `;
 
 const Footer = (props) => {

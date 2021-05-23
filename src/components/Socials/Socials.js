@@ -10,6 +10,16 @@ const Socials = styled.svg`
   &:hover {
     margin-top: -0.4rem;
   }
+
+  @media (max-width: 440px) {
+    margin-left: 0.1rem;
+    margin-top: 1rem;
+    flex: none;
+
+    &:hover {
+      margin-top: -0.1rem;
+    }
+  }
 `;
 
 const TWITTER = styled(Socials)``;

@@ -7,7 +7,13 @@ const HEADERS = styled.div`
   flex-direction: column;
 
   @media (max-width: 780px) {
-    background: ${(props) => (props.bkColor ? props.bkColor : "#ffffff")};
+    background-image: ${(props) => props.background};
+    padding: 4rem;
+  }
+
+  @media (max-width: 590px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -15,6 +21,14 @@ const Line = styled.div`
   width: 12rem;
   height: 1px;
   background: ${(props) => props.line};
+
+  @media (max-width: 780px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 590px) {
+    display: none;
+  }
 `;
 
 const Header = styled.h1`
@@ -30,13 +44,27 @@ const Header = styled.h1`
   @media (max-width: 1420px) {
     font-size: 4rem;
   }
+
+  @media (max-width: 780px) {
+    padding: 0;
+  }
+
+  @media (max-width: 440px) {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  @media (max-width: 280px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Content = styled.div``;
 
 const Headers = (props) => {
   return (
-    <HEADERS>
+    <HEADERS background={props.background} bkColor={props.bkColor}>
       <Line line={props.line} />
       <Header color={props.color}>
         <span>{props.headText1}</span>

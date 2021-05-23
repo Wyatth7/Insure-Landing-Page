@@ -5,6 +5,8 @@ const FOOTER_CONTENT = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Header = styled.p`
@@ -17,6 +19,8 @@ const Header = styled.p`
 const Links = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Link = styled(Header)`

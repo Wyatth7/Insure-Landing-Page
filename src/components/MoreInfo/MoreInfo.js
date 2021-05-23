@@ -15,6 +15,14 @@ const Content = styled.div`
   align-items: center;
   padding: 3.5rem 5rem;
   width: 100%;
+
+  @media (max-width: 780px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 590px) {
+    flex-direction: column;
+  }
 `;
 
 const Header = styled.h1`
@@ -23,6 +31,16 @@ const Header = styled.h1`
   display: flex;
   flex-direction: column;
   font-weight: 400;
+
+  @media (max-width: 780px) {
+    font-size: 2rem;
+    z-index: 200;
+  }
+
+  @media (max-width: 590px) {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
 
   span {
     line-height: 3rem;

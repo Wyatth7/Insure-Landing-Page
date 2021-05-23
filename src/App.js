@@ -42,9 +42,14 @@ const Content = styled.section`
   display: flex;
   flex-direction: column;
   padding: 78px 0;
+
+  @media (max-width: 780px) {
+    padding: 20px 0;
+  }
 `;
 
 const TopInfo = styled.div`
+  position: relative;
   background: linear-gradient(hsl(256, 26%, 20%) 70%, #ffffff 30%);
   display: grid;
   grid-template-columns: 49% 50%;
@@ -77,8 +82,19 @@ const TopInfo = styled.div`
 
   @media (max-width: 780px) {
     grid-template-columns: 100%;
-    padding: 0rem 0;
-    background: #ffffff;
+    grid-gap: 0;
+    padding: 2rem 0;
+    background-image: linear-gradient(
+        hsl(256, 26%, 20%, 0.7),
+        hsl(256, 26%, 20%, 0.7)
+      ),
+      url(${familyImg});
+  }
+
+  @media (max-width: 590px) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 `;
 
@@ -96,6 +112,14 @@ const BottomInfo = styled.div`
   @media (max-width: 920px) {
     padding: 7rem 2rem;
   }
+
+  @media (max-width: 780px) {
+    padding: 0;
+  }
+
+  @media (max-width: 590px) {
+    text-align: center;
+  }
 `;
 
 const IconInfoContainer = styled.div`
@@ -105,6 +129,12 @@ const IconInfoContainer = styled.div`
   grid-gap: 1rem;
   overflow: hidden;
   width: 100%;
+
+  @media (max-width: 780px) {
+    margin-top: 4rem;
+    grid-template-columns: 100%;
+    grid-gap: 4.5rem;
+  }
 `;
 
 const MoreInfoContainer = styled.div`
@@ -121,6 +151,14 @@ const MoreInfoContainer = styled.div`
   @media (max-width: 920px) {
     padding: 3rem 2rem;
   }
+
+  @media (max-width: 780px) {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 440px) {
+    padding: 0;
+  }
 `;
 
 const Picture = styled.img`
@@ -129,11 +167,18 @@ const Picture = styled.img`
 
   @media (max-width: 780px) {
     grid-row-start: 1;
+    display: none;
+  }
+
+  @media (max-width: 590px) {
+    height: 100%;
   }
 `;
 
 const HeaderOneContent = styled.div`
-  order: 2;
+  @media (max-width: 590px) {
+    text-align: center;
+  }
 `;
 
 const HeaderOneParagraph = styled.p`
@@ -159,6 +204,8 @@ function App() {
             color="#ffffff"
             headText1="Humanizing"
             headText2="your insurance."
+            bkColor="hsl(256, 26%, 20%)"
+            background={familyImg}
           >
             <HeaderOneContent>
               <HeaderOneParagraph>
@@ -169,7 +216,7 @@ function App() {
               <Button
                 textHover="hsl(256, 26%, 20%)"
                 textColor="#ffffff"
-                backgroundColor="hsl(256, 26%, 20%)"
+                backgroundColor="transparent"
                 backgroundHover="#ffffff"
                 border="#ffffff"
               >
