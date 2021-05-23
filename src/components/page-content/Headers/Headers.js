@@ -15,6 +15,14 @@ const HEADERS = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 440px) {
+    padding: 4rem 0.5rem;
+  }
+
+  @media (max-width: 440px) {
+    padding: 4rem 0.7rem;
+  }
 `;
 
 const Line = styled.div`
