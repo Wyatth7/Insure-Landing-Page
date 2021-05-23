@@ -34,7 +34,7 @@ const DESK_LEFT = styled.svg`
   z-index: 900;
 
   @media (max-width: 780px) {
-    /* display: none; */
+    display: none;
   }
 `;
 export const DeskLeft = (props) => {
