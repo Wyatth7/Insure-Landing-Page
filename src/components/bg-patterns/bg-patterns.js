@@ -8,7 +8,7 @@ const DESK_RIGHT = styled.svg`
   top: 0;
   z-index: 900;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;
@@ -33,7 +33,7 @@ const DESK_LEFT = styled.svg`
   left: 0;
   z-index: 900;
 
-  @media (max-width: 780px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;
