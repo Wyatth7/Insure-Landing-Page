@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 import Logo from "./Logo/Logo";
 import NavBars from "./NavBars/NavBars";
+import NavClose from "./NavClose/NavClose";
 import NavLinks from "./NavLinks/NavLinks";
 
 const NAV = styled.nav`
@@ -63,7 +64,11 @@ const Nav = (props) => {
           view plans
         </Button>
       </LINKS>
-      <NavBars />
+      {props.active ? (
+        <NavClose showModal={props.toggleModal} />
+      ) : (
+        <NavBars showModal={props.toggleModal} />
+      )}
     </NAV>
   );
 };

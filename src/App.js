@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Nav from "./components/Nav/Nav";
 import Headers from "./components/page-content/Headers/Headers";
@@ -14,6 +14,7 @@ import {
 } from "./components/ProductInfo/Icons/Icons";
 import MoreInfo from "./components/MoreInfo/MoreInfo";
 import Footer from "./components/Footer/Footer";
+import Modal from "./components/Modal/Modal";
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -191,10 +192,17 @@ const HeaderOneParagraph = styled.p`
 `;
 
 function App() {
+  const [showModal, setShowModal] = useState(true);
+
+  const toggleModalHandler = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <APP>
+      {showModal ? <Modal /> : null}
       <GlobalStyles />
-      <Nav />
+      <Nav active={showModal} toggleModal={toggleModalHandler} />
       <Content>
         <DeskRight />
         <DeskLeft />
